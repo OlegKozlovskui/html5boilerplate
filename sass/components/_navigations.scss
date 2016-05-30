@@ -1,0 +1,45 @@
+/* NAVIGATION
+ * -------------------------- */
+
+/* MENU BUTTON
+ * -------------------------- */
+.menu-btn {
+	width: 36px;
+	height: 18px;
+	position: absolute;
+	top: 8px;
+	right: 5px;
+	display: none;
+	cursor: pointer;
+	z-index: 1000;
+	span {
+		height: 3px;
+		margin-top: 7px;
+		background: #000;
+		display: block;
+		position: relative;
+		top: 0;
+		transition: all 500ms ease-out;
+	}
+
+	@media screen and (max-width: 992px) {
+		display: block;
+	}
+
+	span:first-child {
+		margin-top: 0;
+	}
+	&.active span:nth-child(1) {
+		transform: rotate(45deg);
+		top: 12px;
+	}
+	&.active span:nth-child(2) {
+		opacity: 0;
+		top: 7px;
+	}
+	&.active span:nth-child(3) {
+		transform: rotate(-45deg);
+		top: -8px;
+	}
+}
+
