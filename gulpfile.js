@@ -21,14 +21,14 @@ gulp.task('js', function () {
     return gulp.src('js/*.js');
 });
 
-gulp.task('compress_css', function () {
+gulp.task('compressCss', function () {
     return gulp.src('css/style.css')
         .pipe(csso())
         .pipe(rename("style.min.css"))
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('compress_js', function () {
+gulp.task('compressJs', function () {
     return gulp.src('js/main.js')
         .pipe(uglify())
         .pipe(rename("main.min.js"))
@@ -47,8 +47,8 @@ gulp.task('watch', function () {
     gulp.watch('sass/**/*.scss', ['sass']);
     gulp.watch('*.html', ['html']);
     gulp.watch('js/*.js', ['js']);
-    gulp.watch('js/main.js', ['compress_js']);
-    gulp.watch('css/style.css', ['compress_css']);
+    gulp.watch('js/main.js', ['compressJs']);
+    gulp.watch('css/style.css', ['compressCss']);
 });
 
-gulp.task('default', ['sass', 'watch', 'html', 'js', 'compress_css', 'compress_js', 'browser-sync']);
+gulp.task('default', ['sass', 'watch', 'html', 'js', 'compressCss', 'compressJs', 'browser-sync']);

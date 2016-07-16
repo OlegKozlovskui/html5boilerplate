@@ -190,5 +190,4 @@ $(function () {
         initialize('contact-map');
     }
 
-    
 });
