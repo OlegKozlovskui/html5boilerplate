@@ -1,0 +1,16 @@
+{
+  "name": "html5-template",
+  "version": "1.0.0",
+  "description": "HTML template",
+  "author": "Oleg",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-csso": "^2.0.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}
